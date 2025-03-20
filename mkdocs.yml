@@ -1,5 +1,80 @@
-site_name: MkLorum
+# Project information
+copyright: © 2025 プレハブ小屋 All rights reserved.
+#remote_branch: gh-pages
+#remote_name: origin
+repo_url: https://github.com/showa-yojyo/mkdocs/
+site_author: プレハブ小屋
+site_description: デスク
+site_name: プレハブ小屋の MkDocs
+site_url: https://github.com/showa-yojyo/mkdocs/
+
+# Documentation layout
+#draft_focs: []
+#exclude_docs: []
 nav:
   - Home: index.md
   - About: about.md
+  - Extensions: extensions.md
+  - Issues: https://github.com/showa-yojyo/mkdocs/issues
+#not_in_nav: []
+validation:
+  absolute_links: relative_to_docs
+  anchors: warn
+  omitted_files: warn
+  unrecognized_links: warn
+
+## Build directories
+#docs_dir: docs
+extra: {}
+#extra_css: []
+#extra_javascript: []
+#extra_templates: []
+#site_dir: site
 theme: readthedocs
+
+# Preview controls
+#dev_addr: "127.0.0.1:8000"
+strict: true
+
+# about/license.md => /about/license.html
+use_directory_urls: false
+
+# Formatting options
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - codehilite:
+      guess_lang: False
+      linenums: True
+  - def_list
+  - fenced_code
+  - footnotes
+  - meta
+  - tables
+  - toc:
+      permalink: true
+      title: 見出し一覧
+      toc_depth: "2-6"
+
+#  extra: {}
+#  admonition: {}
+#  def_list: {}
+#  footnotes: {}
+#  meta: {}
+#  #nl2br: {}
+#  tables: {}
+#  toc:
+#    permalink: true
+#    title: 見出し一覧
+#    toc_depth: "2-6"
+
+plugins:
+  - search:
+      enabled: True
+      indexing: sections
+      lang:
+        - en
+        - ja
+      min_search_length: 4
+      prebuild_index: False
